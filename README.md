@@ -18,6 +18,4 @@ And there is a photo of mine in '.\xfolder', if you would like to know me haha.
 
 
 
-
-
-<img src="\me.JPG" alt="me" style="zoom:10%;transform:rotate(270deg)" />
+<img src="xfolder/me.jpg" alt="me" style="zoom:20%;" />
