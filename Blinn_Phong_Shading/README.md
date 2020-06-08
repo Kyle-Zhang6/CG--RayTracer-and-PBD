@@ -1,4 +1,32 @@
-## Assignment-01
+## Blinn-Phong Shading
+
+- #### Overview:
+
+  In this project, I apply OpenGL to initialize a rendering window to show a rendered sphere with Blinn-Phong Reflection Model. 
+
+  There's one special effect for anisotropic material, which can have different  specular-term coefficients on direction __u__ and __v__ respectively. The results would be shown below.
+
+  
+
+- #### Results:
+
+  __Some results and their according Command Line Options are given below...__
+
+  1. ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.2 0.2 0.2 -kd 0.7 0.7 0.7 -ks 0.7 0.7 0.7 -sp 20 -pl 400 1000 0 1000 1490 2370 -dl -1 0 -1 1 0.870 0.678
+
+     <img src="Results\isotropic.png" alt="iso" style="zoom:100%;" />
+
+     
+
+  2. ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.2 0.2 0.2 -kd 0.7 0.7 0.7 -ks 0.7 0.7 0.7 -sp 20 -spu 10 -spv 250 -pl 400 1000 0 1000 1490 2370 -dl 1 0 -1 1 1 1
+
+     <img src="Results\anisotropic.png" alt="iso" style="zoom:100%;" />
+
+     We can also press direction keys to move the sphere, which could be re-rendered instantaneously.
+
+     <img src="Results\isotropic_moved.png" alt="iso" style="zoom:100%;" />
+
+     
 
 - #### Codes:
 
@@ -24,7 +52,57 @@
 
 - #### Command lines:
 
-  Except for all the options '-ka', '-kd', '-ks', '-sp', '-spu', '-spv', '-pl' and '-dl', I added two more to help specify parameters of the sphere we are rendering:
+  __'-ka r g b'__ 
+
+  This is the ambient color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive. 
+
+  
+
+  __'-kd r g b'__ 
+
+  This is the diffuse color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive. 
+
+  
+
+  __'-ks r g b'__
+
+  This is the specular color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive. 
+
+  
+
+  __'-spu pu'__ 
+
+  This is the power coefficient on the specular term in the u direction for an anisotropic material.  It is a number between 0 and max_float.
+
+  
+
+  __'-spv pv'__ 
+
+  This is the power coefficient on the specular term in the v direction for an anisotropic material. 
+
+  It is a number between 0 and max_float.
+
+  
+
+  __' -sp p'__ 
+
+  This is the power coefficient on the specular term for an isotropic material. It is a number between 0 and max_float. (*i.e.* the same as setting *pu* and *pv* the the same value.)
+
+  
+
+  __'-pl x y z r g b'__
+
+  This adds a point light to the scene. The x y z values are the location of the light. The r g b values are it's color. Note that the x y z values are relative to the sphere. That is, the center of the sphere is at the origin and the radius of the sphere defines one unit of length. The Y direction is UP, the X direction is to the right on the screen, and the Z direction is "in your face." The r g b value are between 0 and max_float, NOT between 0 and 1 (that is, the r g b values encode the brightness of the light). 
+
+  
+
+  __'-dl x y z r g b'__ 
+
+  This adds a directional light to the scene. The x y z values are the direction that the light points in. The r g b values are it's color. See -pl for coordinate system notes. 
+
+  
+
+  __Except for all the options '-ka', '-kd', '-ks', '-sp', '-spu', '-spv', '-pl' and '-dl', I added two more to help specify parameters of the sphere we are rendering:__
 
   __'-ssm mt'__: Set Sphere Material. Options for 'mt' are 'isotropic' and 'anisotropic'. With  				   'anisotropic' as default;
 
@@ -44,18 +122,3 @@
 
 
 
-- #### Results:
-
-  1. ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.2 0.2 0.2 -kd 0.7 0.7 0.7 -ks 0.7 0.7 0.7 -sp 20 -pl 400 1000 0 1000 1490 2370 -dl -1 0 -1 1 0.870 0.678
-  
-     ![iso](Results\isotropic.png)
-  
-     
-  
-  2. ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.2 0.2 0.2 -kd 0.7 0.7 0.7 -ks 0.7 0.7 0.7 -sp 20 -spu 10 -spv 250 -pl 400 1000 0 1000 1490 2370 -dl 1 0 -1 1 1 1
-  
-     ![aniso](Results\anisotropic.png)
-  
-     We can also press direction keys to move the sphere, which could be rendered instantaneously.
-  
-     ![aniso_moved](Results\isotropic_moved.png)
