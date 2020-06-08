@@ -12,7 +12,7 @@ As for this directory, I will upload some of my work using C++ to render some sc
 
 
 
-And here is a photo of mine, if you would like to know me haha.
+And there is a photo of mine in '.\xfolder', if you would like to know me haha.
 
 
 
@@ -20,4 +20,4 @@ And here is a photo of mine, if you would like to know me haha.
 
 
 
-<img src="xfolder\photo.JPG" alt="me" style="zoom:10%;transform:rotate(270deg)" />
+<img src="\me.JPG" alt="me" style="zoom:10%;transform:rotate(270deg)" />
