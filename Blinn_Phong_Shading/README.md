@@ -12,13 +12,17 @@
 
   __Some results with their according Command Line Options are given below...__
 
-  1. ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.1 0.1 0.1 -kd 0.5 0.5 0.5 -ks 0.5 0.5 0.5 -sp 10 -pl 400 1000 0 0.5 0.745 1.185 -dl -1 0 -1 1 0.870 0.678
+  1. Isotropic Material
+  
+  ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.1 0.1 0.1 -kd 0.5 0.5 0.5 -ks 0.5 0.5 0.5 -sp 10 -pl 400 1000 0 0.5 0.745 1.185 -dl -1 0 -1 1 0.870 0.678
 
      <img src="Results\isotropic.png" alt="iso" style="zoom:100%;" />
 
      
 
-  2. ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.1 0.1 0.1 -kd 0.6 0.6 0.6 -ks 0.7 0.7 0.7 -sp 20 -spu 10 -spv 300 -pl 400 1000 0 0.5 0.745 1.185 -dl 1 0 -1 0.8 0.8 0.8
+  2. Anisotropic Material
+  
+  ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.1 0.1 0.1 -kd 0.6 0.6 0.6 -ks 0.7 0.7 0.7 -sp 20 -spu 10 -spv 300 -pl 400 1000 0 0.5 0.745 1.185 -dl 1 0 -1 0.8 0.8 0.8
 
      <img src="Results\anisotropic.png" alt="iso" style="zoom:100%;" />
 
@@ -28,11 +32,15 @@
 
      
 
-  3. ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.086 0.01 0.03 -kd 0.57 0.08 0.2 -ks 0.5 0.5 0.5 -sp 10 -pl 400 1000 0 1 1 1 -dl -1 0 -1 0.8 0.8 0.8
+  3. Isotropic Material; Plastic Style
+  
+  ./Assignment1 -ssm isotropic -ssc 0.1 0.1 0.1 -ka 0.086 0.01 0.03 -kd 0.57 0.08 0.2 -ks 0.5 0.5 0.5 -sp 10 -pl 400 1000 0 1 1 1 -dl -1 0 -1 0.8 0.8 0.8
 
      <img src="Results\plastic_effect.png" alt="plastic" style="zoom:100%;" />
 
-  4. ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.086 0.01 0.03 -kd 0.57 0.08 0.2 -ks 0.7 0.08 0.25 -spu 10 -spv 200 -pl 400 1000 0 1 1 1 -dl -1 0 -1 0.8 0.8 0.8
+  4. Anisotropic Material; Metal Style
+  
+  ./Assignment1 -ssm anisotropic -ssc 0.1 0.1 0.1 -ka 0.086 0.01 0.03 -kd 0.57 0.08 0.2 -ks 0.7 0.08 0.25 -spu 10 -spv 200 -pl 400 1000 0 1 1 1 -dl -1 0 -1 0.8 0.8 0.8
 
      <img src="Results\metal_effect.png" alt="metal" style="zoom:100%;" />
 
