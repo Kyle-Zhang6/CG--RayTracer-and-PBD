@@ -118,15 +118,4 @@
 
   
 
-- #### Recommended parameters :
-
-  __'-pl'__: 
-
-  Position and intensity of the point light are required. 
-
-  Since the sphere in the center of the scene is already big enough, with radius being several hundreds, the position (x,y,z) should be far enough away from the center of the sphere. e.g. (400,1000,0);
-
-  Because this is a 'Blinn-Phong Refelection Model', distance between sphere and a point light would be taken into consideration. The farther, the weaker for the light arriving the surface. So each channel for intensity are recommended to be about 1000. e.g. (1000,1490,2370)
-
-
 
